@@ -1,4 +1,4 @@
-## MusescoreDowloader
+## MusescoreDownloader
 Creates PDFs from musescore's svgs/pngs from url
 
 It's a python script. Finds a few keywords and extracts the links, then using the libraries, it creates svg/png files and creates a pdf out of it.

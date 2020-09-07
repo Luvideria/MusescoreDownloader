@@ -50,6 +50,8 @@ Type in your link instead of the example one:
 
 ![execute_script](imgtuto/execute_script.PNG)
 
+Your file should be in the directory!
+
 You can specify in which directory you want your output file(s) after the link.
 You can also get the midi file (not always available) by typing something after the directory ( put a dot for the directory if you don't want to type one specifically but want the midi)
 

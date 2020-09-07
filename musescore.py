@@ -181,7 +181,6 @@ will put the sheet and midi file in the chopin directory, will be created if doe
 
         output = open(dirscore+"/"+name+".pdf", "wb")
         merger.write(output) # creates the final pdf
-        [os.remove(f+".svg") for f in listpages] # removes the temporary svg we downloaded
         output.close() # close the output file (otherwise it will be condsidered open)
 
     else:

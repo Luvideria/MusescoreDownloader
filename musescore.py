@@ -51,7 +51,7 @@ def makePdf(pdfFileName, listPages,ext=".png"):
         pdf.add_page()
         pdf.image(str(page) + ext, 0, 0)
 
-    pdf.output( pdfFileName + ".pdf", "F")
+    pdf.output( pdfFileName, "F")
 if __name__ == "__main__":
     try:
         urlin=sys.argv[1]
@@ -112,7 +112,7 @@ will put the sheet and midi file in the chopin directory, will be created if doe
     namestart=mystr.find(nametext)+len(nametext)
     nameend=mystr.find('">\n',namestart)
     name=mystr[namestart:nameend]
-    print("score found: " + name)
+    print("Score found: " + name)
 
     # text to find in the source html to extract the correct url
     svgtext='<link type="image/svg+xml" href="'
@@ -126,16 +126,18 @@ will put the sheet and midi file in the chopin directory, will be created if doe
 
     # find() returns the position of the start of the sequence, need to add lenght
     page=mystr.find(svgtext)+len(svgtext)
-
+    
     # check if find has found something
     if page == len(svgtext)-1:
         scoreext=pngext
         page=mystr.find(pngtext)+len(pngtext)
+        
     if page == len(pngtext)-1:
         scoreext=jpgext
         page=mystr.find(jpgtext)+len(jpgtext)
     # the matching value is always score_0.png or .svg 
-    endpage=mystr.find("score_0"+scoreext,page)
+    endpage=mystr.find("score_0"+scoreext,page) 
+    print("This sheet is available in " + scoreext[1:])
 
     # the midi, if available, is always score.mid
     url=mystr[page:endpage]
@@ -185,3 +187,4 @@ will put the sheet and midi file in the chopin directory, will be created if doe
     else:
     #use the makePdf function defined at the beginning for png and jpg
         makePdf(dirscore+"/"+name+".pdf",listpages, scoreext)
+    [os.remove(f+scoreext) for f in listpages] # removes the temporary svg we downloaded

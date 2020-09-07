@@ -1,9 +1,16 @@
 ## MusescoreDowloader
 Creates PDFs from musescore's svgs/pngs from url
 
-## Beginner instructions:
+It's a python script. Finds a few keywords and extracts the links, then using the libraries, it creates svg/png files and creates a pdf out of it.
 
+## Beginner instructions:
+These instructions are targeted to music people who don't know coding but want those sweet sheets.
+Mainly for windows users, but other OS would use similar steps.
+
+Download the project
 ![download_zip_git](imgtuto/downloadzip.PNG)
+
+Open the explorer, you should find it in Downloads
 
 ![downloads](imgtuto/downloads.PNG)
 
@@ -11,9 +18,9 @@ Can be somewhere else. Type Ctrl+J in your browser, it's your download page, fro
 
 ![extract](imgtuto/extract.PNG)
 
-You can also drag and drop or copy paste wherever you want what's inside the archive when you double click it. Just be sure to know where to find it
+You can also drag and drop or copy paste from within the archive into another directory. Just be sure to know where to find it.
 
-You need to go in the directory
+You need to go inside the directory.
 
 ![powershell](imgtuto/powershell.PNG)
 
@@ -24,8 +31,10 @@ Normally, the appstore should pop up:
 
 ![install_python](imgtuto/install_python.PNG)
 
-If it doesn't appear, go on the microsoft store yourself and type python3. Select 3.7 or 3.8, it doesn't matter for this script.
-Once it is installed, go back to the powershell and type `pip`.
+If it doesn't appear, go on the microsoft store yourself and type python3. Select the version 3.7 or 3.8, it doesn't matter for this script.
+If you do not have the microsoft store, or you are running an older version of windows, you need to install python by yourself (don't worry, it's a few clicks away: [download page](https://www.python.org/downloads/))
+
+Once it's installed, go back to the powershell and type `pip`.
 If you see some text, it means it worked. If it doesn't work, or you see red text, close the window and open it again like we did previously. Try to type `pip` again. If it doens't work, either python is not installed (let it finish!), or it is not in the path.
 Use your favourite search engine to find how to add python in the Path for windows.
 
@@ -33,7 +42,7 @@ Use your favourite search engine to find how to add python in the Path for windo
 
 You should have some downloading going on, let it finish, it should be quick.
 Now everything is ready!
-Go to musescore and get the link as follows
+Go to musescore.com and get the link as follows
 
 ![musescore_link](imgtuto/tuto.PNG)
 
@@ -42,7 +51,8 @@ Type in your link instead of the example one:
 ![execute_script](imgtuto/execute_script.PNG)
 
 You can specify in which directory you want your output file(s) after the link.
-You can also get the midi file (not always available)
+You can also get the midi file (not always available) by typing something after the directory ( put a dot for the directory if you don't want to type one specifically but want the midi)
+
 Check below for examples.
 
 ## Not-Beginner instructions
